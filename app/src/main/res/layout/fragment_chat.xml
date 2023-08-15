@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.view.fragment.ChatFragment">
+
+
+        <Button
+            android:id="@+id/button_exclamatoryPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/green"
+            android:text="!"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_currentMessage" />
+
+        <Button
+            android:id="@+id/button_questionPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/green"
+            android:text="?"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/button_exclamatoryPoint"
+            app:layout_constraintTop_toBottomOf="@+id/editText_currentMessage" />
+
+        <Button
+            android:id="@+id/button_rewriteMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/green"
+            android:text="Перезаписать"
+            android:textColor="#E60707"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.091"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_exclamatoryPoint" />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Подключено, показывайте жесты!"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.022" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="@color/green"
+            app:cardCornerRadius="9dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <TextView
+                    android:id="@+id/textView_correspondence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Переписка..." />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="15dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:scrollbars="horizontal"
+                    android:visibility="gone"
+                    tools:listitem="@layout/recyclerview_item" />
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/button_sendMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/green"
+            android:text="Отправить"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.746"
+            app:layout_constraintStart_toEndOf="@+id/button_questionPoint"
+            app:layout_constraintTop_toBottomOf="@+id/editText_currentMessage" />
+
+        <EditText
+            android:id="@+id/editText_currentMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:hint="Покажите жест или введите текст..."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="56dp"
+            android:backgroundTint="@color/green"
+            android:clickable="true"
+            android:src="@drawable/ic_code_scanner_auto_focus_on"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_sendMessage"
+            app:layout_constraintVertical_bias="0.653" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
