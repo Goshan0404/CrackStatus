@@ -10,7 +10,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.crackstatus.RecyclerViewAdapter
+import com.example.crackstatus.presentation.ioc.RecyclerViewAdapter
 import com.example.crackstatus.databinding.FragmentChatBinding
 import com.example.crackstatus.presentation.view.activity.ScannerActivity
 import com.example.crackstatus.presentation.viewModel.ChatFragmentViewModel

@@ -1,4 +1,4 @@
-package com.example.crackstatus
+package com.example.crackstatus.data
 
 import android.util.Log
 import okhttp3.Response

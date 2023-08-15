@@ -2,7 +2,7 @@ package com.example.crackstatus.presentation.viewModel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.crackstatus.WebsocketListener
+import com.example.crackstatus.data.WebsocketListener
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.WebSocket

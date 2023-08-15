@@ -1,9 +1,9 @@
-package com.example.crackstatus
+package com.example.crackstatus.presentation.ioc
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.example.crackstatus.R
 
 class RecyclerViewAdapter(private val messages: List<String>): RecyclerView.Adapter<RecyclerViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
